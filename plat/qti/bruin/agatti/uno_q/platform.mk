@@ -38,6 +38,7 @@ PLAT_XLAT_TABLES_DYNAMIC		:=	1
 $(eval $(call add_define,PLAT_XLAT_TABLES_DYNAMIC))
 
 PLAT_INCLUDES		:=	-Iinclude/plat/common/					\
+				-I${PLAT_PATH}/bruin/common/inc				\
 				-I${PLAT_PATH}/bruin/${CHIPSET}/inc			\
 				-I${PLAT_PATH}/bruin/${CHIPSET}/${PLAT}/inc		\
 				-I${PLAT_PATH}/common/inc				\
@@ -72,6 +73,7 @@ BL31_SOURCES		+=	drivers/delay_timer/delay_timer.c			\
 				$(PLAT_PATH)/common/src/qti_syscall.c			\
 				$(PLAT_PATH)/common/src/spmi_arb.c			\
 				$(PLAT_PATH)/bruin/common/bruin_bl31_setup.c		\
+				$(PLAT_PATH)/bruin/common/bruin_cpu_id_dump.c		\
 				$(PLAT_PATH)/bruin/common/bruin_gicv3.c			\
 				$(PLAT_PATH)/bruin/common/bruin_topology.c		\
 				$(PLAT_PATH)/bruin/${CHIPSET}/${CHIPSET}_pm.c		\

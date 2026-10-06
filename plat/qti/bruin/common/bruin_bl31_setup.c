@@ -16,6 +16,7 @@
 #include <drivers/qti/smem/smem.h>
 #include <plat/common/platform.h>
 
+#include <bruin_cpu_id_dump.h>
 #include <platform_def.h>
 #include <qti_plat.h>
 #include <qti_uart_console.h>
@@ -45,6 +46,8 @@ void bl31_plat_arch_setup(void)
 
 void bl31_platform_setup(void)
 {
+	bruin_cpu_id_dump();
+
 	generic_delay_timer_init();
 	plat_qti_gic_driver_init();
 	plat_qti_gic_init();
