@@ -7,6 +7,9 @@
 #ifndef QTI_CPU_H
 #define QTI_CPU_H
 
+/* KRYO-2xx Silver MIDR */
+#define QTI_KRYO2_SILVER_MIDR	0x51AF8014
+
 /* KRYO-4xx Gold MIDR */
 #define QTI_KRYO4_GOLD_MIDR	0x517F804D
 
